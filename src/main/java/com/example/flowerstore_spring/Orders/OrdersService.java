@@ -16,6 +16,7 @@ import com.example.flowerstore_spring.Item;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class OrdersService {
@@ -42,7 +43,7 @@ public class OrdersService {
         return orderList
                 .stream()
                 .filter(order -> Objects.equals(order.getId(), id))
-                .toList()
+                .collect(Collectors.toList())
                 .get(0);
     }
 
