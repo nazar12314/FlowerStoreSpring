@@ -123,7 +123,8 @@ public class OrdersService {
 
         if (!order.isProcessed()) {
             return new FailedDeliveryResponse(
-                    "Order is not processed, please process your order and pay for it!"
+                    "Order is not processed,"
+                            + " please process your order and pay for it!"
             );
         }
 
